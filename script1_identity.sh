@@ -1,8 +1,12 @@
 #!/bin/bash
+# Author: Sourav Goswami
+# Admission No: 24BET10003
+
 STUDENT_NAME="Sourav Goswami"
 SOFTWARE_CHOICE="VLC Media Player"
 
-DISTRO=$(hostnamectl | grep "Operating System" | cut -d: -f2)
+# Safer OS detection
+DISTRO=$(grep PRETTY_NAME /etc/os-release | cut -d= -f2 | tr -d '"')
 KERNEL=$(uname -r)
 USER_NAME=$(whoami)
 UPTIME=$(uptime -p)
@@ -17,3 +21,5 @@ echo "Kernel  : $KERNEL"
 echo "User    : $USER_NAME"
 echo "Uptime  : $UPTIME"
 echo "Date    : $CURRENT_TIME"
+echo "------------------------------------------"
+echo "Note: This OS uses open-source licensing (GPL/Linux)."
