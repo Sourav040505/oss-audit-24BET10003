@@ -1,5 +1,12 @@
 #!/bin/bash
+# Author: Sourav Goswami
+# Admission No: 24BET10003
+
 DIRS=("/etc" "/var/log" "/home" "/usr/bin" "/tmp")
+
+echo "=========================================="
+echo " Directory Audit Report"
+echo "=========================================="
 
 for DIR in "${DIRS[@]}"; do
     if [ -d "$DIR" ]; then
@@ -11,9 +18,13 @@ for DIR in "${DIRS[@]}"; do
     fi
 done
 
+# VLC config check
 VLC_CONFIG="$HOME/.config/vlc"
+
+echo "------------------------------------------"
 if [ -d "$VLC_CONFIG" ]; then
-    echo "VLC Config found at $VLC_CONFIG"
+    echo "VLC Config Directory found at $VLC_CONFIG"
+    ls -ld "$VLC_CONFIG"
 else
-    echo "VLC Config not found."
+    echo "VLC Config Directory not found."
 fi
