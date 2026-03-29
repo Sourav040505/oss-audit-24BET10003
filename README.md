@@ -3,45 +3,61 @@
 
 ## 👤 Student Details
 
-* Name: Sourav Goswami
-* Admission Number: 24BET10003
-* Slot: A13
+* **Name:** Sourav Goswami
+* **Admission Number:** 24BET10003
+* **Slot:** A13
 
 ---
 
 ## 💻 Chosen Software
 
-VLC Media Player
+**VLC Media Player**
+
+VLC is a free and open-source multimedia player developed by the VideoLAN project. It supports a wide range of audio and video formats and is widely used due to its flexibility and reliability.
 
 ---
 
-## 📂 Scripts Description
+## 📂 Project Structure
 
-### Script 1 — System Identity Report
+```
+oss-audit-24BET10003/
+├── script1_identity.sh
+├── script2_inspector.sh
+├── script3_auditor.sh
+├── script4_log_analyzer.sh
+├── script5_manifesto.sh
+└── README.md
+```
 
-Displays system details like kernel version, user, uptime, and OS information.
+---
 
-### Script 2 — FOSS Package Inspector
+## 🧾 Scripts Description
 
-Checks if VLC is installed and displays version and license details.
+### 🔹 Script 1 — System Identity Report
 
-### Script 3 — Disk and Permission Auditor
+Displays system information such as OS, kernel version, user, uptime, and date.
 
-Shows permissions and disk usage of important directories and checks VLC config folder.
+### 🔹 Script 2 — FOSS Package Inspector
 
-### Script 4 — Log File Analyzer
+Checks whether VLC is installed and displays its version and description.
 
-Reads a log file, counts keyword occurrences, and displays matching lines.
+### 🔹 Script 3 — Disk and Permission Auditor
 
-### Script 5 — Open Source Manifesto Generator
+Audits system directories and shows permissions and disk usage. Also checks VLC configuration directory.
 
-Generates a personalized open-source statement using user input.
+### 🔹 Script 4 — Log File Analyzer
+
+Analyzes a log file, counts occurrences of a keyword, and displays recent matching entries.
+
+### 🔹 Script 5 — Open Source Manifesto Generator
+
+Generates a personalized open-source philosophy statement using user input.
 
 ---
 
 ## ⚙️ How to Run
 
-### Step 1: Give permission
+### Step 1: Give execution permission
 
 ```bash
 chmod +x *.sh
@@ -61,7 +77,19 @@ chmod +x *.sh
 
 ## 🧩 Requirements
 
-* Linux OS (Ubuntu recommended)
+* Linux OS (Ubuntu/Debian recommended)
 * Bash shell
-* dpkg package manager
+* Basic Linux utilities (grep, awk, du, ls)
 
+---
+
+## 📌 Note
+
+This project demonstrates the use of Linux shell scripting to analyze open-source software and system-level operations.
+
+---
+
+## 🚀 Submission
+
+* GitHub Repository (this repo)
+* Project Report PDF submitted separately
