@@ -1,15 +1,37 @@
 #!/bin/bash
-read -p "Tool: " TOOL
-read -p "Freedom means: " FREEDOM
-read -p "Build: " BUILD
+# Author: Sourav Goswami
+# Admission No: 24BET10003
+
+echo "=========================================="
+echo " Open Source Manifesto Generator"
+echo "=========================================="
+
+# Input
+read -p "Enter one open-source tool you use daily: " TOOL
+read -p "What does 'freedom' mean to you (one word)? " FREEDOM
+read -p "What would you like to build and share? " BUILD
 
 DATE=$(date '+%d %B %Y')
-OUTPUT="manifesto.txt"
+OUTPUT="manifesto_$(whoami).txt"
 
-echo "Open Source Manifesto" > $OUTPUT
+# Write file
+echo "------------------------------------------" > $OUTPUT
+echo "Open Source Manifesto" >> $OUTPUT
 echo "Date: $DATE" >> $OUTPUT
-echo "Using $TOOL reminds me collaboration matters." >> $OUTPUT
-echo "Freedom means $FREEDOM." >> $OUTPUT
-echo "I want to build $BUILD and share it." >> $OUTPUT
+echo "------------------------------------------" >> $OUTPUT
+echo "" >> $OUTPUT
 
+echo "I believe in the power of open-source software." >> $OUTPUT
+echo "Using $TOOL daily reminds me that collaboration drives innovation." >> $OUTPUT
+echo "To me, freedom means $FREEDOM." >> $OUTPUT
+echo "I aim to build $BUILD and share it with the community." >> $OUTPUT
+echo "Open source represents transparency, learning, and growth." >> $OUTPUT
+
+echo "" >> $OUTPUT
+echo "------------------------------------------" >> $OUTPUT
+
+# Output
+echo ""
+echo "Manifesto saved to $OUTPUT"
+echo ""
 cat $OUTPUT
